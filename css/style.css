@@ -1,0 +1,153 @@
+/*----------------------------------------------basic settings----------------------------------------------------*/
+:root{
+    --backcolor:rgb(0, 0, 58);
+    --hover-color:rgb(108, 14, 195);
+    --main-color:darkturquoise;
+}
+
+@font-face {
+    font-family: "vazir";
+    src: url("../font/Vazir.eot") format("embeded opentype"),
+    url("../font/Vazir.woff") format("woff"),
+    url("../font/Vazir.woff2") format("woff2"),
+    url("../font/Vazir.ttf") format("truetype");
+}
+li,ul,ol,a{
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+button{
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+html{
+    direction: rtl;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: "vazir";
+}
+
+body{
+    background-color: var(--backcolor);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/*----------------------------------------------navbar----------------------------------------------------*/
+
+.navbar{
+    display: flex;
+    height: 100px;
+    padding: 10px 50px;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}   
+.website-name{
+    cursor: pointer;
+    color: darkturquoise;
+    transition: .3s;
+    margin-bottom: 15px;
+}
+.website-name:hover{
+    color: blueviolet;
+    
+}
+.navbar h1{
+    font-size: 45px;
+}
+
+.nav ul{
+    display: flex;
+    font-size: 27px;
+    gap: 30px;
+    
+}
+.nav li{
+    transition: .3s;
+    font-weight: 900;
+}
+
+.nav li:hover{
+    color: blueviolet;
+}
+
+
+/*----------------------------------------------header----------------------------------------------------*/
+
+
+.header{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    background-color: rgb(0, 0, 54);
+    box-shadow: 0px 0px 100px blueviolet;
+    margin-top: 70px;
+}
+.right-div{
+    max-width: 46%;
+}
+
+.right-div h4{
+    font-size: 32px;
+}
+.right-div h2{
+    font-size: 57px;
+}
+.header-lorem{
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: 500;
+}
+.download-cv{
+    margin-top: 70px;
+    font-size: 44px;
+    font-weight: 900;
+    padding: 15px 100px;
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 50px aqua;
+    transition: .3s;
+}
+.download-cv:hover{
+    background-color: rgb(0, 183, 255);
+    box-shadow: none;
+}
+.left-div{
+    max-width: 64%;
+}
+
+.header-img{
+    width: 600px;
+    height: 600px;
+    animation: updown 4s infinite;
+}
+.header-social-medias{
+    
+    margin-top: 50px;
+    display: flex;
+    gap: 60px;
+}
+.header-social-medias i{
+    color: white;
+    text-shadow: 0px 0px 10px;
+    font-size: 33px;
+    transition: .3s;
+}
+.header-social-medias i:hover{
+    color: aqua;
+    text-shadow: 0px 0px 10px aqua;
+}
+@keyframes updown{
+    0%  {transform:translateY(0px);}
+    50% {transform: translateY(-50px);}
+    100% {transform: translateY(0px);}
+}
+
