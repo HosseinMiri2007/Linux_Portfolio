@@ -1,8 +1,10 @@
 /*----------------------------------------------basic settings----------------------------------------------------*/
 :root{
-    --backcolor:rgb(0, 0, 58);
-    --hover-color:rgb(108, 14, 195);
-    --main-color:darkturquoise;
+    --backcolor:rgb(12, 15, 12);
+    --hover-color:rgb(255, 132, 0);
+    --main-color:rgb(255, 162, 0);
+    --link-color:rgb(150, 150, 255);
+    --link-hovered-color :rgb(118, 118, 255);
 }
 
 @font-face {
@@ -17,6 +19,15 @@ li,ul,ol,a{
     text-decoration: none;
     cursor: pointer;
 }
+a{
+    color: var(--link-color);
+    transition: 0.5s    ;
+}
+a:hover{
+    color: var(--link-hovered-color);
+}
+
+
 button{
     border: none;
     border-radius: 100px;
@@ -24,6 +35,8 @@ button{
 }
 html{
     direction: rtl;
+    scroll-behavior: smooth;
+    
 }
 
 *{
@@ -37,7 +50,12 @@ html{
 body{
     background-color: var(--backcolor);
     color: white;
-    scroll-behavior: smooth;
+    
+}
+
+span{
+    color: var(--main-color);
+    text-shadow: 0px 0px 5px;
 }
 
 /*----------------------------------------------navbar----------------------------------------------------*/
@@ -52,12 +70,12 @@ body{
 }   
 .website-name{
     cursor: pointer;
-    color: darkturquoise;
+    color: var(--main-color);
     transition: .3s;
     margin-bottom: 15px;
 }
 .website-name:hover{
-    color: blueviolet;
+    color: var(--hover-color);
     
 }
 .navbar h1{
@@ -70,13 +88,14 @@ body{
     gap: 30px;
     
 }
-.nav li{
+.nav li a{
+    color: white;
     transition: .3s;
     font-weight: 900;
 }
 
-.nav li:hover{
-    color: blueviolet;
+.nav li a:hover{
+    color: var(--hover-color);
 }
 
 
@@ -84,12 +103,14 @@ body{
 
 
 .header{
-    
+    margin: 0px auto;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     padding: 30px 100px;
-    background-color: rgb(0, 0, 54);
-    box-shadow: 0px 0px 100px blueviolet;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 0px 0px 50px var(--hover-color);
+    border-radius: 20px;
     margin-top: 70px;
 }
 .right-div{
@@ -102,6 +123,14 @@ body{
 .right-div h2{
     font-size: 57px;
 }
+.i-am{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.career-after-i-am{
+    font-size: 42px;
+}
 .header-lorem{
     margin-top: 50px;
     font-size: 28px;
@@ -113,11 +142,14 @@ body{
     font-weight: 900;
     padding: 15px 100px;
     background-color: var(--main-color);
-    box-shadow: 0px 0px 50px aqua;
+    box-shadow: 0px 0px 50px var(--hover-color);
     transition: .3s;
 }
+.download-cv a{
+    color: white;
+}
 .download-cv:hover{
-    background-color: rgb(0, 183, 255);
+    background-color: var(--hover-color);
     box-shadow: none;
 }
 .left-div{
@@ -129,6 +161,7 @@ body{
     height: 600px;
     animation: updown 4s infinite;
 }
+
 .header-social-medias{
     
     margin-top: 50px;
@@ -136,14 +169,13 @@ body{
     gap: 60px;
 }
 .header-social-medias i{
-    color: white;
-    text-shadow: 0px 0px 10px;
+    color: aliceblue;
     font-size: 33px;
     transition: .3s;
 }
 .header-social-medias i:hover{
-    color: aqua;
-    text-shadow: 0px 0px 10px aqua;
+    color: var(--main-color);
+    text-shadow: 0px 0px 10px var(--hover-color);
 }
 @keyframes updown{
     0%  {transform:translateY(0px);}
@@ -151,3 +183,48 @@ body{
     100% {transform: translateY(0px);}
 }
 
+
+
+/*----------------------------------------------about me----------------------------------------------------*/
+
+
+.about-div{
+    margin-top: 100px;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.about-left-div{
+    max-width: 1000px;
+    padding: 10px 30px;
+}
+
+.about-me-title{
+    font-size: 64px;
+}
+.about-me-description{
+    font-size: 28px;
+
+}
+.about-lorem{
+    font-size: 17px;
+    margin-top: 2rem;
+}
+.about-pic{
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.read-more{
+    margin-top: 70px;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 10px 40px;
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 50px var(--hover-color);
+    transition: .3s;
+}
+.read-more:hover{
+    box-shadow: none;
+}
