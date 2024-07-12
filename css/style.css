@@ -411,6 +411,11 @@ span{
     box-shadow: 0px 0px 20px rgb(0, 0, 77);
 }
 
+.textarea{
+    resize: none;
+    padding: 1.3rem 1.3rem;
+    padding-bottom: 5rem;
+}
 input::placeholder{
     color: white;
 }
@@ -700,6 +705,7 @@ input::placeholder{
 
 
 @media (max-width:770px){
+    
     .nav-div{
         position: relative;
         z-index: 100;
@@ -709,16 +715,16 @@ input::placeholder{
         
         position: absolute;
         display: inline;
-        line-height: 4rem;
-        padding: 2rem 8rem;
+        line-height: 3rem;
+        padding: 1rem 4rem;
         left: 0;
         display: none;
         border: 1px solid var(--hover-color);
-        box-shadow: 0px 0px 10px var(--hover-color);
-        background-color: rgba(29, 32, 40, 0.604);
+        box-shadow: 0px 0px 20px var(--hover-color);
+        background-color: rgba(29, 32, 40, 0.900);
     }
 
-    .hamb-icon{
+       .hamb-icon{
         font-size: 38px;
         display: block;
         text-align: left;
@@ -727,48 +733,63 @@ input::placeholder{
 
     .header{
         flex-direction: column;
+        padding: 30px;
     }
     .left-div{
         max-width: 100%;
         margin: 0px auto;
     }
     .header-img{
-        width: 500px;
-        height: 500px;
+        width: 100%;
+        height: auto;
     }
     .right-div{
+        position: relative;
         max-width: 100%;
         text-align: center;
         order: 2;
     }
-
+    
     .i-am{
-        padding: 0px 5rem;
+        justify-content: center;
+        font-size: 22px;
     }
     .i-am span{
+        
         font-size: 25px;
+        position: absolute;
+        top: 17.5rem;
     }
-
     .header-lorem{
-        font-size: 16px;
+        font-size: 13px;
     }
     .download-cv{
-        font-size: 25px;
-        padding: 1rem 4rem;
+        font-size: 16px;
+        padding: 10px 3rem;
+        transform: scale(1.3);
     }
     .header-social-medias{
         justify-content: center;
+        gap: 2.2rem;
     }
     .header-social-medias i{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     .about-div{
         flex-direction: column-reverse;
-        gap: 3rem;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    .about-me-title{
+        font-size: 2.22rem;
+    }
+    .about-me-description{
+        font-size: 1.2rem;
     }
     .about-left-div{
         display: block;
+        text-align: center;
     }
     .about-left-div{
         justify-content: center;
@@ -784,8 +805,8 @@ input::placeholder{
     }
 
     .service-container{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
         padding: 1rem 0.5rem;
 
         
@@ -801,13 +822,32 @@ input::placeholder{
     }
 
     .project-container{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
-        padding: 1rem 1rem;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+        padding: 1rem 2rem;
+    }
+    .contact-box{
+        padding: 1rem;
+    }
+    .contact-title{
+        font-size: 2.3rem;
+    }
+    .contact-desc{
+        font-size: 1.3rem;
+    }
+    .contact-submit{
+        width: 70%;
+        padding: 0.5rem 2rem;
     }
     .footer-cotainer{
-        padding: 4rem 4rem;
+        padding: 4rem 2rem;
+        text-align: right;
+        flex-direction: column;
     }
-
+    .footer-cotainer ul li{
+        display: inline-block;
+        margin: 0.4rem;   
+    }
+    
 }
 
